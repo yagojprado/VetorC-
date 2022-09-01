@@ -1,0 +1,30 @@
+#include<iostream>
+#include<cstdlib>
+using namespace std;
+
+int main(){
+	string pessoa;
+	double salarios[12];
+	double total=0,media=0;
+	cout<<"*****CADASTRO DE SALARIOS INDIVIDUAL*****"<<endl;
+	cout<<"Informe o nome do trabalhador:  ";	
+	getline(cin,pessoa);
+	cout<<pessoa<<endl;
+	cout<<"Informe os salarios recebidos pelo(a) "<<pessoa<<endl;
+	
+	for(int i=0;i<12;i++){
+		cout<<"Informe o salario do mes "<<(i+1)<<": ";
+	cin>>salarios[i];
+	}
+	system("pause");
+	system("cls");
+	cout<<"RELATORIOS DOS SALARIOS CADASTRADOS"<<endl;
+	
+	for(int i=0;i<12;i++){
+		cout<<"Mes "<<(i+1)<<":  "<<salarios[i]<<endl;
+		total = total + salarios[i];
+	}
+		cout<<"O total recebido no ano foi: "<<"$"<<total<<endl;
+		media = total/12;
+		cout<<"A media salarial de "<<pessoa<<" foi de: "<<media<<endl;
+}
